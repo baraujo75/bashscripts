@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#Begin!!!
+
+printf "\nDirectories Recursive Default Mode Setting!!!\n\n"
+
+read -n 1 -s -r -p "Press any key to continue..."
+
+printf "\n\n"
+
+status=$?
+
+find . -type d -exec chmod 755 {} \;
+
+status=$?
+
+[ $status -eq 0 ] && echo "Command successful!!!" || echo "Failed!!!"
+
+exit 0
+
+#End!!!

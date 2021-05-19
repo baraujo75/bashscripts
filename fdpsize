@@ -1,0 +1,22 @@
+#!/bin/bash
+
+status=$?
+
+printf "\nDuplicated Files Disk Usage Display!!!\n\n"
+
+read -n 1 -s -r -p "Press any key to continue..."
+
+printf "\n\n"
+
+fsdate=$(date +"fds%Y%m%d%H%M")
+
+fdupes -SAmr . > $fsdate.txt
+#find . -type f -exec chmod 644 {} \;
+
+status=$?
+
+[ $status -eq 0 ] && echo "Command successful!!!" || echo "Failed!!!"
+
+exit 0
+
+#End!!!

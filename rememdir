@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#Begin!!!
+
+printf "\n\nEmpty Directories Removal!!!\n\n"
+
+read -n 1 -s -r -p "Press any key to continue..."
+
+status=$?
+
+find ./ -depth -type d -empty -exec rmdir {} \;
+
+status=$?
+
+[ $status -eq 0 ] && echo "Command successful!!!" || echo "Failed!!!"
+
+exit 0
+
+#End!!!

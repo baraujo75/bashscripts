@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#Begin!!!
+
+printf "\nFile Finding!!!\n\n"
+
+read -n 1 -s -r -p "Press any key to continue..."
+
+printf "\n\n"
+
+status=$?
+
+read -p "Enter filename: " filename
+
+echo -e "\nFinding ${filename}:\n"
+
+find . -type f -name $filename
+
+status=$?
+
+[ $status -eq 0 ] && echo -e "\nCommand successful!!!" || echo "Failed!!!"
+
+#End!!!

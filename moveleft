@@ -1,0 +1,2 @@
+#!/bin/bash
+xdotool getactivewindow windowmove 372 430 windowsize 774 568

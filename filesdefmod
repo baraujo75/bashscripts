@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#Begin!!!
+
+printf "\nFiles Recursive Default Mode Setting!!!\n\n"
+
+read -n 1 -s -r -p "Press any key to continue..."
+
+printf "\n\n"
+
+status=$?
+
+find . -type f -exec chmod 644 {} \;
+
+status=$?
+
+[ $status -eq 0 ] && echo "Command successful!!!" || echo "Failed!!!"
+
+exit 0
+
+#End!!!

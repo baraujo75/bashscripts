@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#Begin!!!
+
+printf "\nPDF Files Page Number!!!\n\n"
+
+read -n 1 -s -r -p "Press any key to continue..."
+
+printf "\n\n"
+
+status=$?
+
+for i in *.pdf; do pdfinfo "$i" | grep "^Pages:"; done | awk '{s+=$2} END {print s}'
+
+status=$?
+
+[ $status -eq 0 ] && printf "\nCommand successful!!!\n\n" || printf "\nFailed!!!\n\n"
+
+exit 0
+
+#End!!!

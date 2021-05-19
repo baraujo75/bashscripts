@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#Begin!!!
+
+printf "\nCommand Process Monitoring!!!\n\n"
+
+read -n 1 -s -r -p "Press any key to continue..."
+
+printf "\n\n"
+
+find . -type f | wc -l
+
+if [ $? -eq 0 ]; then
+
+    echo -e "\nCommand success!!!"
+
+else
+
+    echo -e "\nFailed!!!"
+
+fi
+
+#End!!!

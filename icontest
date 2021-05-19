@@ -1,0 +1,21 @@
+#!/bin/bash
+
+printf "\nInternet Conection Speed Test!!!\n\n"
+
+read -n 1 -s -r -p "Press any key to continue..."
+
+printf "\n\n"
+
+status=$?
+
+wget --output-document=/dev/null http://speedtest.wdc01.softlayer.com/downloads/test500.zip
+
+status=$?
+
+#[ $status -eq 0 ] && echo "Command successful!!!" || echo "Failed!!!"
+
+printf "\n\n"
+
+exit 0
+
+#End!!!

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#Begin!!!
+
+printf "\nLocal Disk Usage Display!!!\n\n"
+
+read -n 1 -s -r -p "Press any key to continue..."
+
+printf "\n\n"
+
+status=$?
+
+du -h .|grep 'G\s'
+
+status=$?
+
+[ $status -eq 0 ] && echo "Command successful!!!" || echo "Failed!!!"
+
+exit 0
+
+#End!!!
